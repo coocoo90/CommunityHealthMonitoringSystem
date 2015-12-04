@@ -314,8 +314,9 @@ const CHMSSentimentAnalysisMapConfig = {
 
     colorAxis: {
         min: 0,
-        minColor: '#FF4500',
-        maxColor: '#FFFFE0'
+        max:1,
+        maxColor: '#FF4500',
+        minColor: '#FFFFE0'
     },
 
     mapNavigation: {
@@ -367,7 +368,7 @@ export class CHMSSentimentAnalysisMap extends React.Component {
     render() {
         return (
             <div>
-                <CHMSHeatMap uid={'sentimentAnalysis'} apiAddress={null}
+                <CHMSHeatMap uid={'sentimentAnalysis'} apiAddress={ApiAddresses.sentment_heat}
                              initConfig={CHMSSentimentAnalysisMapConfig} {...this.props}
                              isPureConfig/>
 

@@ -59,20 +59,52 @@ export function fetchChartData(id, address, withData) {
             console.log('Data posted!');
             console.log(withData);
             console.log("to");
-            console.log(address);
             options = {
                 method: 'post', //post
                 headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/x-www-form-urlencoded"
                 },
-                body: JSON.stringify(withData)
-            }
+                body: function () {
+                    let result = '';
+                    for (let i of Object.keys(withData.data)) {
+                        result += `${i}=${withData.data[i]}&`
+                    }
+                    return result;
+                }()
+            };
+            console.log(options);
         }
         return fetch(address,options)
-            .then(fetchUtil.checkHttpStatus) //check if 404
-            .then(fetchUtil.parseJSON)
-            .then(chartConfig => dispatch(fetchDataSucceed(id, chartConfig)))
-            .catch(error => dispatch(fetchDataFailed(id, error)));
+                .then(fetchUtil.checkHttpStatus) //check if 404
+                .then(fetchUtil.parseJSON)
+                .then(chartConfig => dispatch(fetchDataSucceed(id, chartConfig)))
+        .catch(error => dispatch(fetchDataFailed(id, error)));
     }
 }
+
+//Async Action for fetching list data
+//export function fetchChartData(id, address, withData) {
+//
+//    return function (dispatch) {
+//        let options = {};
+//        if (withData !== undefined) {
+//            console.log('Data posted!');
+//            console.log(withData);
+//            console.log("to");
+//            console.log(address);
+//            options = {
+//                method: 'post', //post
+//                headers: {
+//                    'Accept': 'application/json',
+//                    'Content-Type': 'application/json'
+//                },
+//                body: JSON.stringify(withData)
+//            }
+//        }
+//        return fetch(address,options)
+//            .then(fetchUtil.checkHttpStatus) //check if 404
+//            .then(fetchUtil.parseJSON)
+//            .then(chartConfig => dispatch(fetchDataSucceed(id, chartConfig)))
+//            .catch(error => dispatch(fetchDataFailed(id, error)));
+//    }
+//}
