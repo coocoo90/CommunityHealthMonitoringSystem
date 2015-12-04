@@ -217,11 +217,21 @@ const CHMSSentimentAnalysisMapConfig = {
         align: 'right',
         verticalAlign: 'middle'
     },
+    //colors:['rgba(255,255,255,0.02)','rgba(255,235,205,0.2)','rgba(255,222,173,0.4)','rgba(255,175,127,0.6)',
+    //    'rgba(255,172,80,0.8)', 'rgba(255,69,0,1)'],
+
 
     colorAxis: {
+        //dataClasses:[{to:0.01},
+        //    {from:0.01,to:20},
+        //    {from:20,to:40},
+        //    {from:40, to:60},
+        //    {from:60,to:80},
+        //    {from:80}]
         min: 0,
-        minColor: '#FF4500',
-        maxColor: '#FFFFE0'
+        max:100,
+        minColor: '#FF0000',
+        maxColor: '#FFFFF0'
     },
 
     mapNavigation: {
@@ -273,7 +283,7 @@ export class CHMSSentimentAnalysisMap extends React.Component {
     render() {
         return (
             <div>
-                <CHMSHeatMap uid={'sentimentAnalysis'} apiAddress={null}
+                <CHMSHeatMap uid={'sentimentAnalysis'} apiAddress={ApiAddresses.sentiment_heat}
                              initConfig={CHMSSentimentAnalysisMapConfig} {...this.props}
                              isPureConfig/>
 

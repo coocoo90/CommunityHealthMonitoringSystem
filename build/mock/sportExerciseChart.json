@@ -21,39 +21,8 @@
         3461,
         3610
       ],
-      "name": "football",
+      "name": "sentiment",
       "zoneAxis": "x",
-      "zones": [
-        {
-          "value": 6
-        },
-        {
-          "dashStyle": "dot"
-        }
-      ],
-      "pointPlacement": "on"
-    },
-    {
-      "data": [
-        1599,
-        768,
-        1056,
-        442,
-        901,
-        675,
-        826,
-        901
-      ],
-      "name": "soccer",
-      "zoneAxis": "x",
-      "zones": [
-        {
-          "value": 6
-        },
-        {
-          "dashStyle": "dot"
-        }
-      ],
       "pointPlacement": "on"
     }
   ]

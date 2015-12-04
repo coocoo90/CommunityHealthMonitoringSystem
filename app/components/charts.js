@@ -482,7 +482,15 @@ const CHMSProfileFoodChartConfig = {
         layout: 'vertical'
     },
 
-    series: []
+    series: [{
+        "data": [70.4318178614,
+            90.5630841029,
+            62.0841035747,
+            72.1883569832,
+            61.0187384202,
+            59.0760912725
+        ]
+    }]
 
 };
 
@@ -495,6 +503,86 @@ export class CHMSProfileFoodChart extends React.Component {
                     <Col xs={12}>
                         <CHMSHighchart ref="chart" uid={'profileFood'} apiAddress={null}
                                        initConfig={CHMSProfileFoodChartConfig}
+                            {...this.props}
+                                       isPureConfig/>
+                    </Col>
+                </Row>
+            </div>
+        );
+    }
+
+}
+
+const CHMSProfileSportChartConfig = {
+
+        chart: {
+            type: 'column'
+        },
+
+        title: {
+            text: 'Your Favorite Sport',
+            x: -80
+        },
+
+        pane: {
+            size: '80%'
+        },
+
+        xAxis: {
+            crosshair: true
+        },
+
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Times'
+            }
+        },
+
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} g</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+
+        series: [{
+            "name": "Football",
+            "data": [
+                51.80339
+            ]
+        }, {
+            "name": "Basketball",
+            "data": [
+                37.64861281
+            ]
+        }, {
+            "name": "Run",
+            "data": [
+                11.33467514
+            ]
+        }]
+    }
+    ;
+
+export class CHMSProfileSportChart extends React.Component {
+
+    render() {
+        return (
+            <div>
+                <Row>
+                    <Col xs={12}>
+                        <CHMSHighchart ref="chart" uid={'profileSport'} apiAddress={null}
+                                       initConfig={CHMSProfileSportChartConfig}
                             {...this.props}
                                        isPureConfig/>
                     </Col>
@@ -533,7 +621,8 @@ const CHMSIndexFoodChartConfig = {
     yAxis: {
         gridLineInterpolation: 'polygon',
         lineWidth: 0,
-        min: 0
+        min: 0,
+        max: 100
     },
 
     tooltip: {
@@ -549,26 +638,25 @@ const CHMSIndexFoodChartConfig = {
     },
 
     series: [{
-        "name": "Big City",
-        "data": [3424,
-            342,
-            2342,
-            4566,
-            2344,
-            5080
+        "name": "male",
+        "data": [73.4318178614,
+            88.5630841029,
+            62.0841035747,
+            66.1883569832,
+            59.0187384202,
+            59.0760912725
         ]
     }, {
-        "name": "Big City",
-        "data": [1424,
-            5655,
-            3243,
-            7786,
-            4553,
-            1123
+        "name": "female",
+        "data": [67.8159260973,
+            98.1416801451,
+            44.2650014125,
+            70.4803814669,
+            63.0499720917,
+            41.2160754892
         ]
     }]
-}
-;
+};
 
 export class CHMSIndexFoodChart extends React.Component {
 
@@ -636,12 +724,12 @@ const CHMSIndexBarChartConfig = {
 
     series: [
         {
-            "name": "Big City",
-            "data": [3424]
+            "name": "male",
+            "data": [938286]
         },
         {
-            "name": "Leisure City",
-            "data": [6756]
+            "name": "female",
+            "data": [571210]
         }
     ]
 
@@ -717,7 +805,7 @@ export class CHMSSentimentChart extends React.Component {
             <div>
                 <Row>
                     <Col xs={12}>
-                        <CHMSHighchart ref="chart" uid={'sentimentChart'} apiAddress={null}
+                        <CHMSHighchart ref="chart" uid={'sentimentChart'} apiAddress={ApiAddresses.sentiment_chart}
                                        initConfig={CHMSSentimentChartConfig}
                             {...this.props}
                                        isPureConfig/>

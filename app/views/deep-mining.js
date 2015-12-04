@@ -40,6 +40,13 @@ export default class CHMSDeepMiningView extends React.Component {
                     </Col>
                 </Row>
                 <Row>
+                    <Col xs={12}>
+                        <Well>
+                            <CHMSNutrientBarChart />
+                        </Well>
+                    </Col>
+                </Row>
+                <Row>
                     <Col xs={12} sm={6}>
                         <h3>Food Nutrient</h3>
                         <Well><CHMSFoodWebChart /></Well>
@@ -59,13 +66,6 @@ export default class CHMSDeepMiningView extends React.Component {
                             {subViews[this.state.isActive]}
                         </Well>
 
-                    </Col>
-                </Row>
-                <Row>
-                    <Col xs={12}>
-                        <Well>
-                            <CHMSNutrientBarChart />
-                        </Well>
                     </Col>
                 </Row>
             </div>

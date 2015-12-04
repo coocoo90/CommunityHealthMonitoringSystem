@@ -10,7 +10,7 @@ export default class CHMSFooter extends React.Component {
             <div className="container-fluid">
                 <footer>
                     <p className="pull-right"><a href="#">Back to top</a></p>
-                    <p>&copy; 2015 Tommy's Studio, powered by React, Redux, Bootstrap</p>
+                    <p>&copy; 2015 group6, powered by React, Redux, Bootstrap</p>
                 </footer>
             </div>
         );

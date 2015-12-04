@@ -14,6 +14,7 @@ class CHMSRollingTwitter extends React.Component {
     componentDidMount() {
         this.props.dispatch(actions.fetchData(apiAddress.rollingTwitter));
         //TODO make it rolling
+
     }
 
     render() {

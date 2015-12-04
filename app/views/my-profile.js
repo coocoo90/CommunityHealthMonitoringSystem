@@ -2,6 +2,7 @@ import React from 'react';
 import {Panel,Grid,Row,Col} from 'react-bootstrap';
 import {CHMSProfileFoodChart} from '../components/charts';
 import {CHMSProfileSportList} from '../components/ranking-lists';
+import {CHMSProfileSportChart} from '../components/charts';
 
 export default class CHMSMyProfileView extends React.Component {
 
@@ -23,11 +24,11 @@ export default class CHMSMyProfileView extends React.Component {
                 <Grid fluid>
                     <Row>
                         <Col xs={12} md={10} mdPush={1} lg={8} lgPush={2}>
-                            <Panel header={ <h3>Sentiment</h3>}>
+                            <Panel header={ <h3>Sports</h3>}>
                                 <Grid fluid>
                                     <Row>
-                                        <Col xs={12} className="text-center">
-                                            <input id="knobInject" type="text" value="75" className="dial" readOnly/>
+                                        <Col xs={12}>
+                                            <CHMSProfileSportChart />
                                         </Col>
                                     </Row>
                                 </Grid>
@@ -51,11 +52,11 @@ export default class CHMSMyProfileView extends React.Component {
                     <hr />
                     <Row>
                         <Col xs={12} md={10} mdPush={1} lg={8} lgPush={2}>
-                            <Panel header={ <h3>Sports</h3>}>
+                            <Panel header={ <h3>Sentiment</h3>}>
                                 <Grid fluid>
                                     <Row>
-                                        <Col xs={12}>
-                                            <CHMSProfileSportList />
+                                        <Col xs={12} className="text-center">
+                                            <input id="knobInject" type="text" value="68" className="dial" readOnly/>
                                         </Col>
                                     </Row>
                                 </Grid>
