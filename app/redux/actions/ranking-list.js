@@ -29,6 +29,7 @@ export function fetchDataFailed(id,errorMsg) {
 }
 
 export function fetchDataSucceed(id,listData) {
+
     return {
         type: FETCH_DATA_SUCCESS,
         payload: {

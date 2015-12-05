@@ -20,7 +20,8 @@ export default function sentimentScoreReducer(state = initialState, action) {
         case actionTypes.FETCH_DATA_REQUEST:
             return immutableState.setIn(['onState'], onState.fetching).toJS();
         case actionTypes.FETCH_DATA_SUCCESS:
-            return immutableState.setIn(['onState'], onState.drawn).setIn(['score'], action.score.data).toJS();
+            console.log(action);
+            return immutableState.setIn(['onState'], onState.drawn).setIn(['score'], action.playload.score.data).toJS();
         case actionTypes.FETCH_DATA_FAILURE:
             return immutableState.setIn(['onState'], onState.error).toJS();
         default:

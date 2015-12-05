@@ -26,6 +26,8 @@ export function fetchDataFailed(errorMsg) {
 }
 
 export function fetchDataSucceed(score) {
+    console.log("score")
+    console.log(score)
     return {
         type: FETCH_DATA_SUCCESS,
         payload: {
@@ -51,7 +53,7 @@ export function fetchScoreData(address, withData) {
         return fetch(address, options)
             .then(fetchUtil.checkHttpStatus)
             .then(fetchUtil.parseJSON)
-            .then(score => dispatch(fetchDataSucceed(score)))
+            .then(score =>dispatch(fetchDataSucceed(score)))
             .catch(error => dispatch(fetchDataFailed(error)));
     }
 }

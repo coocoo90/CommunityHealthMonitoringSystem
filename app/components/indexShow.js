@@ -56,8 +56,8 @@ export default class CHMSIndexShow extends React.Component {
                 <Row>
                     <Col xs={8} md={8} lg={7} lgPush={1}>
                         <h2 className="">Sentimental Analysis</h2>
-                        <p className="lead">This is the knob about sentimental level for two types of cities,
-                            the cities with faster life pace and the cities with slower life pace. </p>
+                        <p className="lead">This is the knob about sentimental level for two types of genders.
+                             </p>
                     </Col>
                     <Col xs={4} lg={3} lgPush={1}>
                         <div style={{position:"relative",height:135,margin:'auto'}}>
