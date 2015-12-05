@@ -19,7 +19,7 @@ export default class CHMSSentimentAnalysisView extends React.Component {
                 <hr/>
                 <Row>
                     <Col xs={12}>
-                        <Well><CHMSSentimentScore apiAddress={apiAddress.sentimentScore} /></Well>
+
                         <h3>Depression</h3>
                         <Well>
                             <CHMSComponentReloadButton />
@@ -30,7 +30,7 @@ export default class CHMSSentimentAnalysisView extends React.Component {
                 <hr/>
                 <Row>
                     <Col xs={12}>
-                        <Well><CHMSSentimentScore /></Well>
+                        <Well><CHMSSentimentScore apiAddress={apiAddress.sentimentScore} /></Well>
                     </Col>
                 </Row>
                 <hr/>

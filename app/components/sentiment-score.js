@@ -22,7 +22,7 @@ class CHMSSentimentScore extends React.Component {
         (window.$('.scoreKnob')).knob({
             angleOffset: -110,
             angleArc: 220,
-            fgColor: "#66CC66",
+            fgColor: "#6495ED",
             height: 135,
             width: 160,
             thickness: .3
@@ -41,7 +41,7 @@ class CHMSSentimentScore extends React.Component {
     render() {
         const views = [(
             <div >
-                <Input ref="input" type="text" label="{{Placeholder}}" bsSize="large" placeholder="Large text"
+                <Input ref="input" type="text" label="Type in your sentence" bsSize="large" placeholder="Sentence..."
                        buttonAfter={<Button onClick={this.handleClick}>Click me</Button>}/>
 
             </div>), (

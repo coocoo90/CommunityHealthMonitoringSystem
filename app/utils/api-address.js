@@ -16,7 +16,7 @@ export default {
 
     sentiment_chart: 'http://localhost:80/twitter_search_example/Project_new_fixed/controller/sentiment_week.php',
 
-    sentimentScore:'http://localhost:8766',
+    sentimentScore:'http://localhost:8766/',
     contactUsForm: '/mock/foodWebChart.json',
 
 };

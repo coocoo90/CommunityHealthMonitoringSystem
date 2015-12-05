@@ -11,7 +11,7 @@ export default class CHMSMyProfileView extends React.Component {
     }
 
     componentDidMount() {
-        (window.$('#knobInject')).knob({angleOffset: -110, angleArc: 220, fgColor: "#66CC66", height: 135});
+        (window.$('#knobInject')).knob({angleOffset: -110, angleArc: 220, fgColor: "#6495ED", height: 135});
     }
 
     componentWillUnmount() {

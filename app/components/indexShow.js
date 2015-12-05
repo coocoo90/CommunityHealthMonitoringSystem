@@ -10,7 +10,7 @@ export default class CHMSIndexShow extends React.Component {
         (window.$('.indexKnobOuter')).knob({
             angleOffset: -110,
             angleArc: 220,
-            fgColor: "#66CC66",
+            fgColor: "#6495ED",
             height: 135,
             width: 200,
             thickness: .2,
@@ -19,7 +19,7 @@ export default class CHMSIndexShow extends React.Component {
         (window.$('.indexKnobInner')).knob({
             angleOffset: -110,
             angleArc: 220,
-            fgColor: "#66CC66",
+            fgColor: "#FF69B4",
             height: 135,
             width: 160,
             thickness: .3,
@@ -34,8 +34,7 @@ export default class CHMSIndexShow extends React.Component {
                     <Col xs={8} md={6} lg={7} lgPush={1}>
                         <h2 className="">Sport Analysis</h2>
                         <p className="lead">This histogram shows the difference about the frequency that several kinds
-                            of sports are played in the cities with faster life pace and the cities with slower life
-                            pace respectively.</p>
+                            of sports are mentioned by the different genders.</p>
                     </Col>
                     <Col xs={4} md={5} lg={2}>
                         <CHMSIndexBarChart />
@@ -49,7 +48,7 @@ export default class CHMSIndexShow extends React.Component {
                     <Col xs={8} md={6} lg={7}>
                         <h2 className="">Food Analysis</h2>
                         <p className="lead">This is a spider web which shows the average nutrition content of the food
-                            in cities with faster life pace and the cities with slower life pace respectively.</p>
+                            about male and female.</p>
                     </Col>
                 </Row>
                 <hr />
